@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miss You</title>
+    <style>
+        /* Reset and basic styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            animation: fadeIn 2s ease-in-out;
+            padding: 20px;
+        }
+
+        .glow-text {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            color: #ff6b6b;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .pulse-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .pulse-button:hover {
+            background-color: #ff4757;
+            transform: scale(1.1);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Mobile-friendly styles */
+        @media (max-width: 600px) {
+            .glow-text {
+                font-size: 2.5rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+            .pulse-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow-text">I <span class="heart">❤️</span> Miss You</h1>
+        <p class="message">Every second apart feels like an eternity.</p>
+        <button class="pulse-button" onclick="sendLove()">Send Love Back</button>
+    </div>
+
+    <script>
+        function sendLove() {
+            alert("Love Sent! 💖");
+        }
+    </script>
+</body>
+</html>
